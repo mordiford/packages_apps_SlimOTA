@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fusionjack.slimota.utils;
+package com.aicp.aicpota.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fusionjack.slimota.configs.OTAConfig;
+import com.aicp.aicpota.configs.OTAConfig;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.fusionjack.slimota.tasks;
+package com.aicp.aicpota.tasks;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -28,16 +28,16 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Message;
 
-import com.fusionjack.slimota.MainActivity;
-import com.fusionjack.slimota.R;
-import com.fusionjack.slimota.configs.AppConfig;
-import com.fusionjack.slimota.configs.LinkConfig;
-import com.fusionjack.slimota.configs.OTAConfig;
-import com.fusionjack.slimota.configs.OTAVersion;
-import com.fusionjack.slimota.dialogs.WaitDialogHandler;
-import com.fusionjack.slimota.utils.OTAUtils;
-import com.fusionjack.slimota.xml.OTADevice;
-import com.fusionjack.slimota.xml.OTAParser;
+import com.aicp.aicpota.MainActivity;
+import com.aicp.aicpota.R;
+import com.aicp.aicpota.configs.AppConfig;
+import com.aicp.aicpota.configs.LinkConfig;
+import com.aicp.aicpota.configs.OTAConfig;
+import com.aicp.aicpota.configs.OTAVersion;
+import com.aicp.aicpota.dialogs.WaitDialogHandler;
+import com.aicp.aicpota.utils.OTAUtils;
+import com.aicp.aicpota.xml.OTADevice;
+import com.aicp.aicpota.xml.OTAParser;
 
 import org.xmlpull.v1.XmlPullParserException;
 

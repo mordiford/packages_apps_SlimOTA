@@ -1,1 +1,1 @@
--keep class com.fusionjack.slimota.core.OTAListener
+-keep class com.aicp.aicpota.core.OTAListener

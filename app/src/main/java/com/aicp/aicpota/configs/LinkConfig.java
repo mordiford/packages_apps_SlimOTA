@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.fusionjack.slimota.configs;
+package com.aicp.aicpota.configs;
 
 import android.content.Context;
 
-import com.fusionjack.slimota.xml.OTALink;
-import com.fusionjack.slimota.xml.OTAParser;
-import com.fusionjack.slimota.utils.OTAUtils;
+import com.aicp.aicpota.xml.OTALink;
+import com.aicp.aicpota.xml.OTAParser;
+import com.aicp.aicpota.utils.OTAUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

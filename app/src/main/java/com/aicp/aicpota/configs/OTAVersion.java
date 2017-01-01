@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.fusionjack.slimota.configs;
+package com.aicp.aicpota.configs;
 
 import android.content.Context;
 
-import com.fusionjack.slimota.utils.OTAUtils;
+import com.aicp.aicpota.utils.OTAUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
