@@ -25,7 +25,7 @@ import com.aicp.aicpota.configs.LinkConfig;
 import com.aicp.aicpota.dialogs.WaitDialogFragment;
 import com.aicp.aicpota.fragments.SlimOTAFragment;
 
-public class MainActivity extends PreferenceActivity implements
+public class MainActivity extends BaseActivity implements
         WaitDialogFragment.OTADialogListener, LinkConfig.LinkConfigListener {
 
     private static final String FRAGMENT_TAG = SlimOTAFragment.class.getName();
