@@ -49,6 +49,7 @@
     <!-- Notification -->
     <string name="notification_title">ROM Update</string>
     <string name="notification_message">New update available!</string>
+    <string name="notification_channel_name">AICP unofficail OTA</string>
 
     <!-- Dialog -->
     <string name="dialog_message">Checking for ROM updates, please wait…</string>

@@ -17,6 +17,7 @@
 package com.aicp.aicpota.tasks;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -46,6 +47,7 @@ import java.io.InputStream;
 
 public class CheckUpdateTask extends AsyncTask<Context, Void, OTADevice> {
 
+    public static String CHAN_ID = "AICP_OTA";
     private static CheckUpdateTask mInstance = null;
     private final Handler mHandler = new WaitDialogHandler();
     private Context mContext;
@@ -150,12 +152,23 @@ public class CheckUpdateTask extends AsyncTask<Context, Void, OTADevice> {
         return (netInfo != null && netInfo.isConnected());
     }
 
+    private static void setupNotificationChannels(Context context) {
+        NotificationManager notiman = context.getSystemService(NotificationManager.class);
+        NotificationChannel otaChan = new NotificationChannel(CHAN_ID,
+                context.getString(R.string.notification_channel_name),
+                NotificationManager.IMPORTANCE_DEFAULT);
+        notiman.createNotificationChannel(otaChan);
+    }
+
     private void showNotification(Context context) {
+        setupNotificationChannels(context);
+
         Notification.Builder builder = new Notification.Builder(context);
         builder.setContentTitle(context.getString(R.string.notification_title));
         builder.setContentText(context.getString(R.string.notification_message));
         builder.setSmallIcon(R.drawable.ic_notification_slimota);
         builder.setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_slimota));
+        builder.setChannel(CHAN_ID);
 
         Intent intent = new Intent(context, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
