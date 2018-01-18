@@ -17,6 +17,7 @@
 package com.aicp.aicpota.configs;
 
 import android.content.Context;
+import android.os.SystemProperties;
 
 import com.aicp.aicpota.utils.OTAUtils;
 
@@ -35,7 +36,7 @@ public class OTAVersion {
         if (source.equalsIgnoreCase(UNAME_R)) {
             sourceString = OTAUtils.runCommand(UNAME_R);
         } else {
-            sourceString = OTAUtils.getBuildProp(source);
+            sourceString = SystemProperties.get(source, "");
         }
         return sourceString;
     }

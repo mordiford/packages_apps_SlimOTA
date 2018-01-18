@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
+import android.os.SystemProperties;
 
 import com.aicp.aicpota.configs.OTAConfig;
 
@@ -40,8 +41,6 @@ public final class OTAUtils {
 
     private static final String TAG = "SlimOTA";
     private static final boolean DEBUG = true;
-
-    private static final String BUILD_PROP = "/system/build.prop";
 
     private OTAUtils() {
     }
@@ -67,20 +66,7 @@ public final class OTAUtils {
 
     public static String getDeviceName(Context context) {
         String propName = OTAConfig.getInstance(context).getDeviceSource();
-        return OTAUtils.getBuildProp(propName);
-    }
-
-    public static String getBuildProp(String propertyName) {
-        Properties buildProps = new Properties();
-        try {
-            FileInputStream is = new FileInputStream(new File(BUILD_PROP));
-            buildProps.load(is);
-            is.close();
-            return buildProps.getProperty(propertyName, "");
-        } catch (IOException e) {
-            logError(e);
-        }
-        return "";
+        return SystemProperties.get(propName, "");
     }
 
     public static String runCommand(String command) {
